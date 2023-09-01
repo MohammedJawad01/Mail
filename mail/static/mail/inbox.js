@@ -58,13 +58,9 @@ function view_mail(id){
       //archive/unarchive
       const archive_btn = document.createElement('button');
       archive_btn.innerHTML = email.archived ? "unarchive" : "archive";
-
-
-
-      //change it 
       archive_btn.className = email.archived ? "btn btn-success" : "btn btn-dark";
 
-      //
+      
 
       const replay_btn = document.createElement('button');
       replay_btn.innerHTML ="Replay"
@@ -93,12 +89,6 @@ function view_mail(id){
       });
       document.querySelector('#mail-details').append(archive_btn);
 
-      //Replay
-
-  
-
-
-
   });
 
 }
@@ -123,8 +113,7 @@ function load_mailbox(mailbox) {
       newMail.innerHTML = ` 
       <h6>From: ${singleMail.sender}</h6>
       <h5>Subject: ${singleMail.subject}</h5>
-      <p>${singleMail.timestamp}</p>
-      `;
+      <p>${singleMail.timestamp}</p> `;
       //changing the background-color
       newMail.className = singleMail.read ? 'read' : 'unread';
 
